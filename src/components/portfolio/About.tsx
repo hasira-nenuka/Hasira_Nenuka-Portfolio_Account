@@ -4,7 +4,7 @@ import { GraduationCap, Code2, Layers, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 const POINTS = [
-  { icon: GraduationCap, text: "Software Engineering undergraduate." },
+  { icon: GraduationCap, text: "Information Technology undergraduate." },
   { icon: Code2, text: "Interested in Full-Stack Development." },
   { icon: Layers, text: "Passionate about learning modern technologies." },
   { icon: ShieldCheck, text: "Strong problem-solving mindset." },
