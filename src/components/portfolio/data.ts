@@ -91,7 +91,7 @@ export const EDUCATION = {
   graduation: "Expected 2026",
   modules: [
     "Database Systems",
-    "Software Engineering",
+    "Information Technology",
     "Web Application Development",
     "Data Structures & Algorithms",
     "Computer Networks",
