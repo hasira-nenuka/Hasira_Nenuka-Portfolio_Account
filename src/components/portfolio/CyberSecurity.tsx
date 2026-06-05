@@ -13,7 +13,7 @@ export function CyberSecurity() {
       title={<>Building software that's <span className="gradient-text">secure by design</span></>}
       subtitle="A growing area of interest alongside my core software engineering studies."
     >
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5">
         {SECURITY_INTERESTS.map((s, i) => {
           const Icon = ICONS[i % ICONS.length];
           return (
@@ -30,7 +30,20 @@ export function CyberSecurity() {
                 <Icon className="size-5" />
               </span>
               <h3 className="relative font-semibold">{s.title}</h3>
-              <p className="relative text-sm text-muted-foreground mt-1">{s.desc}</p>
+              <p className="relative text-sm leading-6 text-muted-foreground mt-3">{s.desc}</p>
+              <div className="relative mt-5 border-t border-white/10 pt-4">
+                <p className="text-xs uppercase tracking-widest text-[var(--brand)] font-semibold">Key Areas</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {s.keyAreas.map((area) => (
+                    <span
+                      key={area}
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-foreground/85"
+                    >
+                      {area}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           );
         })}

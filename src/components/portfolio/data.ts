@@ -110,16 +110,66 @@ export const CERTIFICATIONS = [
   { title: "University Coursework Projects", org: "Software Engineering Department", year: "2023 – Present" },
   { title: "Programming Certifications", org: "Oracle / Microsoft Learn", year: "2024" },
   { title: "Online Learning Certificates", org: "Coursera • Udemy", year: "2023 – 2024" },
-  { title: "Hackathons", org: "University & Inter-University Events", year: "2024" },
+  { title: "Extra Skills", org: "Sports • Additional Skill Certificates", year: "2023 – 2024" },
   { title: "Workshops", org: "Industry Tech Talks", year: "2023 – 2024" },
 ];
 
 export const SECURITY_INTERESTS = [
-  { title: "Network Security", desc: "Understanding protocols, firewalls and secure architectures." },
-  { title: "Ethical Hacking Fundamentals", desc: "Learning offensive security in controlled lab environments." },
-  { title: "Secure Software Development", desc: "Applying OWASP best practices throughout the SDLC." },
-  { title: "Linux Administration", desc: "Hardening servers and managing permissions on Unix systems." },
-  { title: "Web Application Security", desc: "Mitigating XSS, CSRF, SQL injection and auth flaws." },
+  {
+    title: "Network Security",
+    desc: "Network Security focuses on protecting computer networks, systems, and data from unauthorized access, cyber threats, and attacks. It involves firewalls, secure communication protocols, intrusion detection systems, and network monitoring techniques to maintain confidentiality, integrity, and availability.",
+    keyAreas: [
+      "TCP/IP & Networking Fundamentals",
+      "Firewalls & VPN Configuration",
+      "Intrusion Detection & Prevention Systems",
+      "Secure Network Architecture",
+      "Traffic Analysis & Monitoring",
+    ],
+  },
+  {
+    title: "Ethical Hacking Fundamentals",
+    desc: "Ethical Hacking involves identifying vulnerabilities in systems and applications through authorized security testing. It helps organizations discover weaknesses before malicious attackers can exploit them, improving overall cybersecurity posture.",
+    keyAreas: [
+      "Reconnaissance & Information Gathering",
+      "Vulnerability Assessment",
+      "Penetration Testing Basics",
+      "Security Testing Methodologies",
+      "Responsible Disclosure Practices",
+    ],
+  },
+  {
+    title: "Secure Software Development",
+    desc: "Secure Software Development integrates security principles throughout the Software Development Life Cycle. The goal is to design, develop, test, and maintain applications that are resilient against modern cyber threats and common vulnerabilities.",
+    keyAreas: [
+      "OWASP Top 10 Security Risks",
+      "Secure Coding Standards",
+      "Authentication & Authorization",
+      "Input Validation & Data Protection",
+      "Security Testing & Code Review",
+    ],
+  },
+  {
+    title: "Linux Administration",
+    desc: "Linux Administration focuses on managing, configuring, and securing Linux-based systems and servers. It includes user management, system monitoring, permission handling, and server hardening to ensure reliable and secure operations.",
+    keyAreas: [
+      "Linux Commands & Shell Scripting",
+      "User & Permission Management",
+      "Server Configuration",
+      "System Monitoring & Troubleshooting",
+      "Security Hardening Techniques",
+    ],
+  },
+  {
+    title: "Web Application Security",
+    desc: "Web Application Security involves protecting websites and web applications from common cyber threats and vulnerabilities. It focuses on secure coding practices and defensive mechanisms to safeguard user data and application functionality.",
+    keyAreas: [
+      "Cross-Site Scripting Prevention",
+      "Cross-Site Request Forgery Protection",
+      "SQL Injection Mitigation",
+      "Secure Authentication & Session Management",
+      "API & Application Security",
+    ],
+  },
 ];
 
 export const STATS = [
