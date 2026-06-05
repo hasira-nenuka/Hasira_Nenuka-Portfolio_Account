@@ -1,65 +1,118 @@
 import { motion } from "framer-motion";
-import { Download, Mail, Github, Linkedin, ArrowRight, Sparkles } from "lucide-react";
-import { SOCIALS } from "./data";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  ShieldCheck,
+  Sparkles,
+  TerminalSquare,
+} from "lucide-react";
+import { HIGHLIGHTS, SOCIALS, STATS } from "./data";
 
 export function Hero() {
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-      {/* decorative blobs */}
-      <div aria-hidden className="absolute -top-32 -left-20 size-[420px] rounded-full bg-[var(--brand)]/20 blur-3xl animate-blob" />
-      <div aria-hidden className="absolute top-20 -right-20 size-[420px] rounded-full bg-[var(--brand-2)]/20 blur-3xl animate-blob" />
+    <section
+      id="home"
+      className="relative min-h-[94vh] overflow-hidden pt-28 pb-16 md:pt-36 md:pb-20"
+    >
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-px bg-[image:var(--gradient-brand)] opacity-70"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-24 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"
+      />
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 grid md:grid-cols-[1.2fr_1fr] gap-12 items-center">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.04fr_0.96fr]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs text-muted-foreground mb-6">
-            <Sparkles className="size-3.5 text-[var(--brand)]" />
-            Available for internships & collaborations
+          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
+            <Sparkles className="size-3.5 text-[var(--brand-2)]" />
+            <span className="truncate">
+              Available for internships, freelance work and collaborations
+            </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight">
-            Hi, I'm <span className="gradient-text">Hasira Nenuka</span>
+          <h1 className="max-w-4xl text-4xl font-bold leading-[1.02] sm:text-5xl md:text-7xl">
+            Hasira Nenuka
+            <span className="block gradient-text">Software Developer</span>
+            <span className="block text-foreground/92">with a security mindset.</span>
           </h1>
 
-          <p className="mt-5 text-lg md:text-xl text-foreground/90 font-medium">
-            Information Technology Undergraduate | Full-Stack Developer
+          <p className="mt-6 max-w-2xl text-lg font-medium text-foreground/90 md:text-xl">
+            Information Technology undergraduate building reliable web applications with clean
+            interfaces, practical backends and a growing security mindset.
           </p>
 
-          <p className="mt-4 text-muted-foreground max-w-xl leading-relaxed">
-            Passionate about software development, web technologies, cloud computing, and solving real-world
-            problems through technology. I enjoy building scalable applications and continuously expanding my
-            technical expertise.
+          <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">
+            I focus on useful software: campus systems, helpdesk workflows, automation projects and
+            modern full-stack applications that solve real problems with thoughtful design.
           </p>
+
+          <div className="mt-7 flex flex-wrap gap-2.5">
+            {HIGHLIGHTS.map((highlight) => (
+              <span
+                key={highlight}
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.055] px-3 py-1.5 text-xs text-foreground/85"
+              >
+                <CheckCircle2 className="size-3 text-[var(--brand-2)]" />
+                {highlight}
+              </span>
+            ))}
+          </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground font-medium glow hover:opacity-95 transition"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-[image:var(--gradient-brand)] px-5 py-3 font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition hover:-translate-y-0.5"
             >
-              View Projects
-              <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass hover:border-[var(--brand)]/50 transition"
-            >
-              <Download className="size-4" /> Download CV
+              <span
+                aria-hidden
+                className="absolute inset-y-0 left-0 w-16 bg-white/25 blur-xl animate-sheen"
+              />
+              <span className="relative">View Projects</span>
+              <ArrowRight className="relative size-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-border hover:bg-accent transition"
+              className="inline-flex items-center gap-2 rounded-xl border border-border bg-background/30 px-5 py-3 font-medium transition hover:-translate-y-0.5 hover:border-[var(--brand)]/50 hover:bg-accent/60"
             >
               <Mail className="size-4" /> Contact Me
             </a>
+            <a
+              href="/Hasira-Nenuka-Profile-Summary.pdf"
+              download="Hasira-Nenuka-Profile-Summary.pdf"
+              className="inline-flex items-center gap-2 rounded-xl glass px-5 py-3 font-medium transition hover:-translate-y-0.5 hover:border-[var(--brand-2)]/50"
+            >
+              <Download className="size-4" /> Download Profile
+            </a>
           </div>
 
-          <div className="mt-8 flex items-center gap-3">
-            <SocialIcon href={SOCIALS.github} label="GitHub"><Github className="size-4" /></SocialIcon>
-            <SocialIcon href={SOCIALS.linkedin} label="LinkedIn"><Linkedin className="size-4" /></SocialIcon>
-            <SocialIcon href={SOCIALS.email} label="Email"><Mail className="size-4" /></SocialIcon>
+          <div className="mt-9 flex flex-wrap items-center gap-5">
+            <div className="flex items-center gap-3">
+              <SocialIcon href={SOCIALS.github} label="GitHub">
+                <Github className="size-4" />
+              </SocialIcon>
+              <SocialIcon href={SOCIALS.linkedin} label="LinkedIn">
+                <Linkedin className="size-4" />
+              </SocialIcon>
+              <SocialIcon href={SOCIALS.email} label="Email">
+                <Mail className="size-4" />
+              </SocialIcon>
+            </div>
+            <div className="h-8 w-px bg-border" />
+            <p className="flex items-center gap-2 text-sm text-muted-foreground">
+              <MapPin className="size-4 text-[var(--brand)]" />
+              Maharagama, Sri Lanka
+            </p>
           </div>
         </motion.div>
 
@@ -67,26 +120,68 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="relative justify-self-center md:justify-self-end"
+          className="relative w-full max-w-[470px] justify-self-center lg:justify-self-end"
         >
-          <div className="absolute inset-0 -m-6 rounded-[2rem] bg-[image:var(--gradient-brand)] opacity-30 blur-2xl" />
-          <div className="relative animate-float">
-            <div className="p-[2px] rounded-3xl bg-[image:var(--gradient-brand)] glow">
-              <div className="rounded-3xl bg-card overflow-hidden">
-                <img
-                  src="/Profile.jpeg"
-                  alt="Hasira Nenuka portrait"
-                  width={420}
-                  height={420}
-                  className="size-72 sm:size-80 md:size-[360px] object-cover"
-                />
+          <div className="surface relative overflow-hidden rounded-[1.75rem] p-4 sm:p-5">
+            <div
+              aria-hidden
+              className="absolute inset-x-8 top-0 h-px bg-[image:var(--gradient-brand)]"
+            />
+            <div
+              aria-hidden
+              className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"
+            />
+
+            <div className="mb-4 flex items-center justify-between rounded-2xl border border-white/10 bg-background/35 px-4 py-3">
+              <div className="flex items-center gap-2">
+                <span className="grid size-9 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground">
+                  <TerminalSquare className="size-4" />
+                </span>
+                <div>
+                  <p className="text-sm font-semibold">Portfolio Console</p>
+                  <p className="text-[11px] text-muted-foreground">
+                    Full-stack + security learning
+                  </p>
+                </div>
+              </div>
+              <span className="rounded-full border border-[var(--brand)]/30 bg-[var(--brand)]/10 px-2.5 py-1 text-[11px] font-semibold text-[var(--brand)]">
+                Online
+              </span>
+            </div>
+
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-secondary">
+              <img
+                src="/Profile.jpeg"
+                alt="Hasira Nenuka portrait"
+                width={680}
+                height={760}
+                className="aspect-[4/4.25] w-full object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/94 via-background/35 to-transparent p-5 pt-24">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-sm font-semibold">Building modern web systems</p>
+                    <p className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <ShieldCheck className="size-3.5" /> Secure, usable and maintainable
+                    </p>
+                  </div>
+                  <span className="grid size-11 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-glow)]">
+                    <ShieldCheck className="size-5" />
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="absolute -bottom-4 -left-4 glass rounded-xl px-3 py-2 text-xs">
-              <span className="text-[var(--brand)] font-semibold">{"<"}/{">"}</span> Full-Stack Dev
-            </div>
-            <div className="absolute -top-4 -right-4 glass rounded-xl px-3 py-2 text-xs">
-              🎓 Information Technology
+
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2">
+              {STATS.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-2xl border border-white/10 bg-white/[0.045] p-4"
+                >
+                  <p className="text-2xl font-bold gradient-text md:text-3xl">{stat.value}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>
@@ -95,14 +190,22 @@ export function Hero() {
   );
 }
 
-function SocialIcon({ href, label, children }: { href: string; label: string; children: React.ReactNode }) {
+function SocialIcon({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <a
       href={href}
       aria-label={label}
       target="_blank"
       rel="noreferrer"
-      className="grid place-items-center size-10 rounded-xl glass hover:text-[var(--brand)] hover:border-[var(--brand)]/50 transition"
+      className="grid size-10 place-items-center rounded-xl glass transition hover:-translate-y-0.5 hover:border-[var(--brand)]/50 hover:text-[var(--brand)]"
     >
       {children}
     </a>

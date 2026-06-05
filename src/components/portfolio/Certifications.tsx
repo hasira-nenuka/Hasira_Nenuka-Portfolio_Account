@@ -67,7 +67,8 @@ const CERTIFICATE_GALLERIES = {
   },
 } as const;
 
-type Certificate = (typeof CERTIFICATE_GALLERIES)[keyof typeof CERTIFICATE_GALLERIES]["certificates"][number];
+type Certificate =
+  (typeof CERTIFICATE_GALLERIES)[keyof typeof CERTIFICATE_GALLERIES]["certificates"][number];
 type CertificateGalleryTitle = keyof typeof CERTIFICATE_GALLERIES;
 
 const GITHUB_PROJECTS_URL = `${SOCIALS.github}?tab=repositories`;
@@ -85,11 +86,17 @@ export function Certifications() {
     <Section
       id="certs"
       eyebrow="Achievements & Certifications"
-      title={<>Milestones along the <span className="gradient-text">way</span></>}
+      title={
+        <>
+          Credentials that show <span className="gradient-text">continued growth</span>
+        </>
+      }
+      subtitle="Certificates, workshops, coursework and extra achievements that support my technical path."
     >
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {CERTIFICATIONS.map((c, i) => {
-          const galleryTitle = c.title in CERTIFICATE_GALLERIES ? (c.title as CertificateGalleryTitle) : null;
+          const galleryTitle =
+            c.title in CERTIFICATE_GALLERIES ? (c.title as CertificateGalleryTitle) : null;
           const isCourseworkProjects = c.title === "University Coursework Projects";
 
           return (
@@ -105,7 +112,7 @@ export function Certifications() {
                 <button
                   type="button"
                   onClick={() => setActiveGallery(galleryTitle)}
-                  className="glass rounded-2xl p-6 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)] w-full h-full cursor-pointer"
+                  className="surface group h-full w-full cursor-pointer rounded-2xl p-6 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]"
                   aria-haspopup="dialog"
                   aria-label={`Open ${c.title}`}
                 >
@@ -116,13 +123,18 @@ export function Certifications() {
                   href={GITHUB_PROJECTS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="glass rounded-2xl p-6 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)] w-full h-full cursor-pointer block"
+                  className="surface group block h-full w-full cursor-pointer rounded-2xl p-6 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]"
                   aria-label="Open all projects on GitHub"
                 >
-                  <CertificationCardContent title={c.title} org={c.org} year={c.year} actionIcon="external" />
+                  <CertificationCardContent
+                    title={c.title}
+                    org={c.org}
+                    year={c.year}
+                    actionIcon="external"
+                  />
                 </a>
               ) : (
-                <div className="glass rounded-2xl p-6 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40 h-full">
+                <div className="surface group h-full rounded-2xl p-6 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40">
                   <CertificationCardContent title={c.title} org={c.org} year={c.year} />
                 </div>
               )}
@@ -158,14 +170,16 @@ function CertificationCardContent({
 }) {
   return (
     <>
-      <span className="grid place-items-center size-10 rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground mb-4">
+      <span className="mb-4 grid size-11 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-glow)] transition group-hover:scale-105">
         <Award className="size-5" />
       </span>
       <h3 className="font-semibold">{title}</h3>
       <p className="text-sm text-muted-foreground mt-1">{org}</p>
-      <div className="flex items-center justify-between gap-3 mt-3">
+      <div className="mt-4 flex items-center justify-between gap-3 border-t border-white/10 pt-4">
         <p className="text-xs text-[var(--brand)] font-medium">{year}</p>
-        {actionIcon === "external" ? <ExternalLink className="size-4 text-muted-foreground" aria-hidden="true" /> : null}
+        {actionIcon === "external" ? (
+          <ExternalLink className="size-4 text-muted-foreground" aria-hidden="true" />
+        ) : null}
         {isClickable ? <Eye className="size-4 text-muted-foreground" aria-hidden="true" /> : null}
       </div>
     </>
@@ -197,10 +211,15 @@ function CertificatesModal({
               <Images className="size-5" />
             </span>
             <div className="min-w-0">
-              <p className="text-xs uppercase tracking-widest text-[var(--brand)] font-semibold truncate">{gallery.eyebrow}</p>
-              <h3 id="certificates-gallery-title" className="font-semibold text-lg sm:text-xl">{gallery.title}</h3>
+              <p className="text-xs uppercase tracking-widest text-[var(--brand)] font-semibold truncate">
+                {gallery.eyebrow}
+              </p>
+              <h3 id="certificates-gallery-title" className="font-semibold text-lg sm:text-xl">
+                {gallery.title}
+              </h3>
               <p className="text-sm text-muted-foreground">
-                {gallery.certificates.length} {gallery.certificates.length === 1 ? "certificate" : "certificates"}
+                {gallery.certificates.length}{" "}
+                {gallery.certificates.length === 1 ? "certificate" : "certificates"}
               </p>
             </div>
           </div>
@@ -275,7 +294,7 @@ function CertificateThumbnail({
     <button
       type="button"
       onClick={onClick}
-      className="group glass rounded-2xl p-3 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/50 hover:shadow-[var(--shadow-card)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]"
+      className="group surface rounded-2xl p-3 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/50 hover:shadow-[var(--shadow-card)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]"
       aria-label={`View ${certificate.title} larger`}
     >
       <div className="relative aspect-[4/3] rounded-xl bg-white overflow-hidden grid place-items-center shadow-lg">

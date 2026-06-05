@@ -1,20 +1,43 @@
 export const NAV_LINKS = [
   { href: "#about", label: "About" },
+  { href: "#capabilities", label: "Services" },
   { href: "#skills", label: "Skills" },
   { href: "#education", label: "Education" },
   { href: "#projects", label: "Projects" },
   { href: "#github", label: "GitHub" },
   { href: "#certs", label: "Achievements" },
-  { href: "#security", label: "Cyber Security" },
+  { href: "#security", label: "Security" },
   { href: "#contact", label: "Contact" },
 ];
 
 export const SKILLS = [
-  { group: "Frontend", items: ["React", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap"] },
+  {
+    group: "Frontend",
+    items: [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Bootstrap",
+    ],
+  },
   { group: "Backend", items: ["Java", "Spring Boot", "Node.js", "Express.js", "PHP", "Python"] },
   { group: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB", "Oracle Database"] },
   { group: "Tools", items: ["Git", "GitHub", "Docker", "Linux", "VS Code", "Postman"] },
-  { group: "Other Knowledge", items: ["REST APIs", "OOP", "Data Structures", "Algorithms", "Database Design", "Agile Development"] },
+  {
+    group: "Engineering Practice",
+    items: [
+      "REST APIs",
+      "OOP",
+      "Data Structures",
+      "Algorithms",
+      "Database Design",
+      "Agile Development",
+    ],
+  },
 ];
 
 export type ProjectCategory = "Frontend" | "Backend" | "Full Stack" | "Academic";
@@ -31,65 +54,77 @@ export const PROJECTS: {
 }[] = [
   {
     title: "University Internship & Career Management System",
-    description: "A complete platform to manage internships, career opportunities, applications, approvals, communication and analytics.",
+    description:
+      "A complete platform for internships, career opportunities, applications, approvals, communication and analytics.",
     tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
     category: ["Full Stack", "Academic"],
     github: "https://github.com/hasira-nenuka/university_internship_career_management_system",
     demo: "#",
-    gradient: "from-blue-500/30 to-purple-500/30",
+    gradient: "from-cyan-500/25 via-emerald-500/20 to-amber-500/25",
     image: "/University%20internship%20and%20career%20management%20system.png",
   },
   {
     title: "Automated Language Conversion Tests",
-    description: "Playwright UI automation suite for Singlish and Thanglish to Sinhala and Tamil language conversion testing.",
+    description:
+      "Playwright UI automation suite for validating Singlish and Thanglish conversion flows into Sinhala and Tamil.",
     tech: ["Playwright", "TypeScript", "Node.js", "GitHub Actions"],
     category: ["Academic"],
     github: "#",
-    gradient: "from-emerald-500/30 to-cyan-500/30",
+    gradient: "from-emerald-500/25 via-cyan-500/20 to-sky-500/25",
     image: "/Automated%20language%20conversion%20test.png",
   },
   {
     title: "Facilities Halls Booking System",
-    description: "A campus facilities platform for hall bookings, maintenance requests, ticket tracking, approvals and role-based access.",
+    description:
+      "A campus facilities platform for hall bookings, maintenance requests, ticket tracking, approvals and role-based access.",
     tech: ["React", "Node.js", "MongoDB"],
     category: ["Full Stack", "Academic"],
     github: "#",
     demo: "#",
-    gradient: "from-indigo-500/30 to-blue-500/30",
+    gradient: "from-teal-500/25 via-blue-500/20 to-violet-500/20",
     image: "/Facilities%20halls%20booking%20system.png",
   },
   {
     title: "Helpdesk Management System",
-    description: "A complete ticket support system with user and admin dashboards, ticket assignment, PDF exports and REST API endpoints.",
+    description:
+      "A support system with user/admin dashboards, ticket assignment, PDF exports and REST API endpoints.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     category: ["Full Stack"],
     github: "https://github.com/hasira-nenuka/HelpdeskManagementSystem",
     demo: "#",
-    gradient: "from-violet-500/30 to-indigo-500/30",
+    gradient: "from-rose-500/20 via-cyan-500/20 to-emerald-500/25",
     image: "/Helpdesk%20management%20system.png",
   },
   {
     title: "MERN Application",
-    description: "A full-stack MERN application that manages orders, inventory, finance, support/helpdesk and navigation integrations.",
+    description:
+      "A MERN application for orders, inventory, finance, support/helpdesk workflows and navigation integrations.",
     tech: ["MongoDB", "Express", "React", "Node.js"],
     category: ["Full Stack"],
     github: "https://github.com/hasira-nenuka/Ama-MERN",
     demo: "#",
-    gradient: "from-fuchsia-500/30 to-pink-500/30",
+    gradient: "from-fuchsia-500/20 via-rose-500/20 to-amber-500/25",
     image: "/MERN%20application.png",
   },
   {
     title: "Test Automation Assignment",
-    description: "Exploration of automation testing types — unit, integration, performance, regression, smoke and API testing.",
+    description:
+      "Exploration of automation testing types - unit, integration, performance, regression, smoke and API testing.",
     tech: ["Selenium", "Java", "TestNG"],
     category: ["Academic"],
     github: "#",
-    gradient: "from-cyan-500/30 to-blue-500/30",
+    gradient: "from-sky-500/25 via-cyan-500/20 to-emerald-500/25",
     image: "/Test%20Automation%20Assignment.jpg",
   },
 ];
 
-export const PROJECT_FILTERS: (ProjectCategory | "All")[] = ["All", "Frontend", "Backend", "Full Stack", "Academic"];
+export const PROJECT_FILTERS: (ProjectCategory | "All")[] = [
+  "All",
+  "Frontend",
+  "Backend",
+  "Full Stack",
+  "Academic",
+];
 
 export const EDUCATION = {
   degree: "Bachelor of Science Honours in Information Technology",
@@ -107,67 +142,71 @@ export const EDUCATION = {
 };
 
 export const CERTIFICATIONS = [
-  { title: "University Coursework Projects", org: "Software Engineering Department", year: "2023 – Present" },
+  {
+    title: "University Coursework Projects",
+    org: "Software Engineering Department",
+    year: "2023 - Present",
+  },
   { title: "Programming Certifications", org: "Oracle / Microsoft Learn", year: "2024" },
-  { title: "Online Learning Certificates", org: "Coursera • Udemy", year: "2023 – 2024" },
-  { title: "Extra Skills", org: "Sports • Additional Skill Certificates", year: "2023 – 2024" },
-  { title: "Workshops", org: "Industry Tech Talks", year: "2023 – 2024" },
+  { title: "Online Learning Certificates", org: "Coursera / Udemy", year: "2023 - 2024" },
+  { title: "Extra Skills", org: "Sports / Additional Skill Certificates", year: "2023 - 2024" },
+  { title: "Workshops", org: "Industry Tech Talks", year: "2023 - 2024" },
 ];
 
 export const SECURITY_INTERESTS = [
   {
     title: "Network Security",
-    desc: "Network Security focuses on protecting computer networks, systems, and data from unauthorized access, cyber threats, and attacks. It involves firewalls, secure communication protocols, intrusion detection systems, and network monitoring techniques to maintain confidentiality, integrity, and availability.",
+    desc: "Protecting computer networks, systems and data from unauthorized access through firewalls, secure protocols, intrusion detection and active monitoring.",
     keyAreas: [
       "TCP/IP & Networking Fundamentals",
       "Firewalls & VPN Configuration",
-      "Intrusion Detection & Prevention Systems",
+      "Intrusion Detection Systems",
       "Secure Network Architecture",
       "Traffic Analysis & Monitoring",
     ],
   },
   {
     title: "Ethical Hacking Fundamentals",
-    desc: "Ethical Hacking involves identifying vulnerabilities in systems and applications through authorized security testing. It helps organizations discover weaknesses before malicious attackers can exploit them, improving overall cybersecurity posture.",
+    desc: "Identifying vulnerabilities through authorized security testing so weaknesses can be discovered and fixed before they become real risks.",
     keyAreas: [
-      "Reconnaissance & Information Gathering",
+      "Reconnaissance",
       "Vulnerability Assessment",
       "Penetration Testing Basics",
-      "Security Testing Methodologies",
-      "Responsible Disclosure Practices",
+      "Testing Methodologies",
+      "Responsible Disclosure",
     ],
   },
   {
     title: "Secure Software Development",
-    desc: "Secure Software Development integrates security principles throughout the Software Development Life Cycle. The goal is to design, develop, test, and maintain applications that are resilient against modern cyber threats and common vulnerabilities.",
+    desc: "Building security into the software development life cycle so applications are designed, tested and maintained with resilience in mind.",
     keyAreas: [
-      "OWASP Top 10 Security Risks",
+      "OWASP Top 10",
       "Secure Coding Standards",
       "Authentication & Authorization",
-      "Input Validation & Data Protection",
-      "Security Testing & Code Review",
+      "Input Validation",
+      "Security Code Review",
     ],
   },
   {
     title: "Linux Administration",
-    desc: "Linux Administration focuses on managing, configuring, and securing Linux-based systems and servers. It includes user management, system monitoring, permission handling, and server hardening to ensure reliable and secure operations.",
+    desc: "Managing, configuring and securing Linux-based systems through permissions, monitoring, troubleshooting and server hardening.",
     keyAreas: [
-      "Linux Commands & Shell Scripting",
+      "Shell Scripting",
       "User & Permission Management",
       "Server Configuration",
-      "System Monitoring & Troubleshooting",
-      "Security Hardening Techniques",
+      "System Monitoring",
+      "Security Hardening",
     ],
   },
   {
     title: "Web Application Security",
-    desc: "Web Application Security involves protecting websites and web applications from common cyber threats and vulnerabilities. It focuses on secure coding practices and defensive mechanisms to safeguard user data and application functionality.",
+    desc: "Protecting websites and APIs from common vulnerabilities through secure coding practices, defensive controls and careful testing.",
     keyAreas: [
-      "Cross-Site Scripting Prevention",
-      "Cross-Site Request Forgery Protection",
+      "XSS Prevention",
+      "CSRF Protection",
       "SQL Injection Mitigation",
-      "Secure Authentication & Session Management",
-      "API & Application Security",
+      "Session Management",
+      "API Security",
     ],
   },
 ];
@@ -177,6 +216,31 @@ export const STATS = [
   { value: "15+", label: "Completed Projects" },
   { value: "20+", label: "Technologies Learned" },
   { value: "10+", label: "Academic Achievements" },
+];
+
+export const HIGHLIGHTS = [
+  "Full-stack web applications",
+  "Secure software practices",
+  "Automation and testing",
+  "Academic project leadership",
+];
+
+export const CAPABILITIES = [
+  {
+    title: "Product-Focused Web Apps",
+    desc: "Designing and building responsive dashboards, portals and workflow tools with clean user journeys.",
+    points: ["Interface architecture", "Reusable React components", "Responsive delivery"],
+  },
+  {
+    title: "Reliable Backend Systems",
+    desc: "Creating practical APIs, data models and authentication flows that support real application needs.",
+    points: ["REST API design", "MongoDB and SQL models", "Role-based access"],
+  },
+  {
+    title: "Security-Aware Delivery",
+    desc: "Applying secure development habits across forms, sessions, validation and deployment thinking.",
+    points: ["OWASP awareness", "Input validation", "Testing mindset"],
+  },
 ];
 
 export const SOCIALS = {

@@ -18,47 +18,53 @@ const LANGS = [
 ];
 
 export function GitHubShowcase() {
-  // synthetic contribution graph
   const cells = Array.from({ length: 7 * 26 });
   return (
     <Section
       id="github"
       eyebrow="GitHub Showcase"
-      title={<>Open source <span className="gradient-text">activity</span></>}
-      subtitle="A look at my GitHub contributions, statistics and most-used languages."
+      title={
+        <>
+          Development activity and <span className="gradient-text">technical direction</span>
+        </>
+      }
+      subtitle="A portfolio-style view of repositories, practice areas and frequently used technologies."
     >
-      <div className="grid lg:grid-cols-3 gap-5">
-        <div className="lg:col-span-2 glass rounded-2xl p-6">
-          <div className="flex items-center justify-between mb-5">
+      <div className="grid gap-5 lg:grid-cols-3">
+        <div className="surface rounded-2xl p-6 lg:col-span-2">
+          <div className="mb-5 flex items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <Github className="size-5" />
+              <span className="grid size-10 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground">
+                <Github className="size-5" />
+              </span>
               <h3 className="font-semibold">Contribution graph</h3>
             </div>
             <span className="text-xs text-muted-foreground">Last 6 months</span>
           </div>
           <div
-            className="grid gap-1"
+            className="grid gap-1 rounded-2xl border border-white/10 bg-background/30 p-3"
             style={{ gridTemplateColumns: "repeat(26, minmax(0, 1fr))" }}
+            aria-label="Decorative GitHub-style contribution grid"
           >
             {cells.map((_, i) => {
-              const intensity = Math.random();
+              const intensity = ((i * 17 + Math.floor(i / 7) * 11) % 100) / 100;
               const lvl =
                 intensity > 0.85
                   ? "bg-[var(--brand-2)]"
                   : intensity > 0.65
-                  ? "bg-[var(--brand)]"
-                  : intensity > 0.4
-                  ? "bg-[var(--brand)]/50"
-                  : intensity > 0.2
-                  ? "bg-[var(--brand)]/20"
-                  : "bg-secondary";
+                    ? "bg-[var(--brand)]"
+                    : intensity > 0.4
+                      ? "bg-[var(--brand)]/50"
+                      : intensity > 0.2
+                        ? "bg-[var(--brand)]/20"
+                        : "bg-secondary";
               return <div key={i} className={`aspect-square rounded-[3px] ${lvl}`} />;
             })}
           </div>
 
-          <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {STATS.map((s) => (
-              <div key={s.label} className="rounded-xl border border-border p-3">
+              <div key={s.label} className="rounded-xl border border-border bg-background/25 p-3">
                 <s.icon className="size-4 text-[var(--brand)]" />
                 <div className="mt-2 font-semibold">{s.value}</div>
                 <div className="text-[11px] text-muted-foreground">{s.label}</div>
@@ -67,7 +73,7 @@ export function GitHubShowcase() {
           </div>
         </div>
 
-        <div className="glass rounded-2xl p-6">
+        <div className="surface rounded-2xl p-6">
           <h3 className="font-semibold mb-5">Top languages</h3>
           <div className="space-y-4">
             {LANGS.map((l, i) => (
@@ -79,7 +85,7 @@ export function GitHubShowcase() {
                 <div className="h-2 rounded-full bg-secondary overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
-                    whileInView={{ width: `${l.pct * 2.5}%` }}
+                    whileInView={{ width: `${l.pct}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.9, delay: i * 0.08 }}
                     className={`h-full rounded-full bg-gradient-to-r ${l.color}`}

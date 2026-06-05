@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
+import { Capabilities } from "@/components/portfolio/Capabilities";
 import { Skills } from "@/components/portfolio/Skills";
 import { Education } from "@/components/portfolio/Education";
 import { Projects } from "@/components/portfolio/Projects";
@@ -15,10 +16,17 @@ import { Loader } from "@/components/portfolio/Loader";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hasira Nenuka — Software Engineering Undergraduate & Full-Stack Developer" },
-      { name: "description", content: "Portfolio of Hasira Nenuka, a Software Engineering undergraduate and full-stack developer building scalable, secure and modern web applications." },
-      { property: "og:title", content: "Hasira Nenuka — Software Engineer" },
-      { property: "og:description", content: "Full-stack developer building modern, scalable software." },
+      { title: "Hasira Nenuka - Software Engineering Undergraduate & Full-Stack Developer" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Hasira Nenuka, an Information Technology undergraduate and full-stack developer building scalable, secure and modern web applications.",
+      },
+      { property: "og:title", content: "Hasira Nenuka - Software Engineer" },
+      {
+        property: "og:description",
+        content: "Full-stack developer building modern, scalable software.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
     ],
@@ -29,11 +37,12 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="relative min-h-dvh">
+    <main className="relative min-h-dvh overflow-hidden">
       <Loader />
       <Navbar />
       <Hero />
       <About />
+      <Capabilities />
       <Skills />
       <Education />
       <Projects />

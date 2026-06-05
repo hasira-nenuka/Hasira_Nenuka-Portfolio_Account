@@ -1,13 +1,25 @@
+import { motion } from "framer-motion";
+import { Code2, GraduationCap, Layers, ShieldCheck } from "lucide-react";
 import { Section } from "./Section";
 import { STATS } from "./data";
-import { GraduationCap, Code2, Layers, ShieldCheck } from "lucide-react";
-import { motion } from "framer-motion";
 
 const POINTS = [
-  { icon: GraduationCap, text: "Information Technology undergraduate." },
-  { icon: Code2, text: "Interested in Full-Stack Development." },
-  { icon: Layers, text: "Passionate about learning modern technologies." },
-  { icon: ShieldCheck, text: "Strong problem-solving mindset." },
+  {
+    icon: GraduationCap,
+    text: "Information Technology undergraduate with hands-on academic project experience.",
+  },
+  {
+    icon: Code2,
+    text: "Focused on full-stack systems with practical interfaces and maintainable APIs.",
+  },
+  {
+    icon: Layers,
+    text: "Comfortable learning modern tools and turning coursework into working products.",
+  },
+  {
+    icon: ShieldCheck,
+    text: "Growing security awareness across authentication, validation and application design.",
+  },
 ];
 
 export function About() {
@@ -15,24 +27,28 @@ export function About() {
     <Section
       id="about"
       eyebrow="About Me"
-      title={<>Turning Ideas into <span className="gradient-text">Innovative Digital Experiences</span></>}
-      subtitle="I'm an Information Technology undergraduate and aspiring Full-Stack Developer with a passion for building efficient, user-friendly, and scalable applications. I enjoy working with modern web technologies, databases, and cloud platforms while continuously expanding my knowledge through academic projects, self-learning, and hands-on experience. I am driven by curiosity, problem-solving, and a commitment to creating meaningful digital solutions that deliver value to users."
+      title={
+        <>
+          A developer shaped by <span className="gradient-text">curiosity and craft</span>
+        </>
+      }
+      subtitle="I am an Information Technology undergraduate and aspiring full-stack developer who enjoys building efficient, user-friendly and scalable applications. My work combines academic learning, self-study and practical project building."
     >
-      <div className="grid lg:grid-cols-2 gap-10 items-start">
+      <div className="grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr]">
         <ul className="space-y-4">
           {POINTS.map((p, i) => (
             <motion.li
-              key={i}
+              key={p.text}
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="flex items-start gap-3 glass rounded-xl p-4"
+              className="surface group flex items-start gap-4 rounded-2xl p-5 card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40"
             >
-              <span className="grid place-items-center size-9 rounded-lg bg-[image:var(--gradient-brand)] text-primary-foreground shrink-0">
-                <p.icon className="size-4" />
+              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-glow)] transition group-hover:scale-105">
+                <p.icon className="size-5" />
               </span>
-              <span className="text-sm md:text-base text-foreground/90">{p.text}</span>
+              <span className="text-sm leading-6 text-foreground/90 md:text-base">{p.text}</span>
             </motion.li>
           ))}
         </ul>
@@ -45,10 +61,14 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="glass rounded-2xl p-6 text-center card-hover hover:-translate-y-1"
+              className="surface relative overflow-hidden rounded-2xl p-6 text-center card-hover hover:-translate-y-1 hover:border-[var(--brand-2)]/40"
             >
-              <div className="text-3xl md:text-4xl font-bold gradient-text">{s.value}</div>
-              <div className="mt-1 text-xs md:text-sm text-muted-foreground">{s.label}</div>
+              <div
+                aria-hidden
+                className="absolute inset-x-6 top-0 h-px bg-[image:var(--gradient-brand)] opacity-70"
+              />
+              <div className="text-3xl font-bold gradient-text md:text-4xl">{s.value}</div>
+              <div className="mt-1 text-xs text-muted-foreground md:text-sm">{s.label}</div>
             </motion.div>
           ))}
         </div>
