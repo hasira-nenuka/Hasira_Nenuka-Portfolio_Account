@@ -27,7 +27,9 @@ export function Navbar() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div
           className={`transition-all duration-300 ${
-            scrolled ? "glass rounded-2xl px-3 shadow-[var(--shadow-card)]" : "px-0"
+            scrolled
+              ? "glass premium-border rounded-2xl px-3 shadow-[var(--shadow-card)]"
+              : "px-0"
           }`}
         >
           <nav className="flex h-14 items-center justify-between">
@@ -37,6 +39,10 @@ export function Navbar() {
               </span>
               <span className="hidden sm:inline">Hasira Nenuka</span>
               <span className="sm:hidden">Hasira</span>
+              <span
+                aria-hidden
+                className="hidden h-2 w-2 rounded-full bg-[var(--brand-2)] shadow-[0_0_18px_var(--brand-2)] md:block"
+              />
             </a>
 
             <ul className="hidden items-center gap-1 xl:flex">
@@ -44,7 +50,7 @@ export function Navbar() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.055] hover:text-foreground"
+                    className="rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.07] hover:text-foreground hover:shadow-[inset_0_0_0_1px_oklch(1_0_0/0.08)]"
                   >
                     {l.label}
                   </a>
@@ -62,7 +68,7 @@ export function Navbar() {
               </button>
               <a
                 href="#contact"
-                className="hidden items-center rounded-xl bg-[image:var(--gradient-brand)] px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition hover:-translate-y-0.5 sm:inline-flex"
+                className="hidden items-center rounded-xl bg-[image:var(--gradient-brand)] bg-[length:180%_180%] px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition hover:-translate-y-0.5 animate-gradient-pan sm:inline-flex"
               >
                 Hire me
               </a>

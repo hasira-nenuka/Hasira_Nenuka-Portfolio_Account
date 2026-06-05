@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="relative min-h-dvh overflow-hidden">
+    <main className="page-shell relative min-h-dvh overflow-hidden">
       <Loader />
       <Navbar />
       <Hero />

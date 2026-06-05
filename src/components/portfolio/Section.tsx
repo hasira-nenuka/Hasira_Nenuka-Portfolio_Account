@@ -16,6 +16,11 @@ export function Section({
 }) {
   return (
     <section id={id} className="relative scroll-mt-24 py-16 md:py-24">
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--brand)]/20 via-50% to-transparent"
+      />
+      <div aria-hidden className="section-ribbon" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,7 +30,7 @@ export function Section({
           className="mb-10 max-w-3xl md:mb-12"
         >
           {eyebrow && (
-            <span className="mb-3 inline-flex rounded-full border border-white/10 bg-white/[0.055] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[var(--brand)] shadow-[0_10px_30px_-22px_var(--brand)]">
+            <span className="premium-border mb-3 inline-flex overflow-hidden rounded-full bg-white/[0.055] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[var(--brand)] shadow-[0_10px_30px_-22px_var(--brand)]">
               {eyebrow}
             </span>
           )}

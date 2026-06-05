@@ -60,7 +60,7 @@ export const PROJECTS: {
     category: ["Full Stack", "Academic"],
     github: "https://github.com/hasira-nenuka/university_internship_career_management_system",
     demo: "#",
-    gradient: "from-cyan-500/25 via-emerald-500/20 to-amber-500/25",
+    gradient: "from-teal-400/30 via-amber-300/20 to-rose-500/25",
     image: "/University%20internship%20and%20career%20management%20system.png",
   },
   {
@@ -70,7 +70,7 @@ export const PROJECTS: {
     tech: ["Playwright", "TypeScript", "Node.js", "GitHub Actions"],
     category: ["Academic"],
     github: "#",
-    gradient: "from-emerald-500/25 via-cyan-500/20 to-sky-500/25",
+    gradient: "from-lime-400/25 via-teal-400/20 to-violet-500/25",
     image: "/Automated%20language%20conversion%20test.png",
   },
   {
@@ -81,7 +81,7 @@ export const PROJECTS: {
     category: ["Full Stack", "Academic"],
     github: "#",
     demo: "#",
-    gradient: "from-teal-500/25 via-blue-500/20 to-violet-500/20",
+    gradient: "from-emerald-400/25 via-orange-300/20 to-fuchsia-500/20",
     image: "/Facilities%20halls%20booking%20system.png",
   },
   {
@@ -92,7 +92,7 @@ export const PROJECTS: {
     category: ["Full Stack"],
     github: "https://github.com/hasira-nenuka/HelpdeskManagementSystem",
     demo: "#",
-    gradient: "from-rose-500/20 via-cyan-500/20 to-emerald-500/25",
+    gradient: "from-rose-500/25 via-teal-400/20 to-lime-400/25",
     image: "/Helpdesk%20management%20system.png",
   },
   {
@@ -103,7 +103,7 @@ export const PROJECTS: {
     category: ["Full Stack"],
     github: "https://github.com/hasira-nenuka/Ama-MERN",
     demo: "#",
-    gradient: "from-fuchsia-500/20 via-rose-500/20 to-amber-500/25",
+    gradient: "from-violet-500/22 via-orange-500/20 to-amber-300/25",
     image: "/MERN%20application.png",
   },
   {
@@ -113,7 +113,7 @@ export const PROJECTS: {
     tech: ["Selenium", "Java", "TestNG"],
     category: ["Academic"],
     github: "#",
-    gradient: "from-sky-500/25 via-cyan-500/20 to-emerald-500/25",
+    gradient: "from-teal-400/25 via-lime-300/20 to-rose-500/22",
     image: "/Test%20Automation%20Assignment.jpg",
   },
 ];

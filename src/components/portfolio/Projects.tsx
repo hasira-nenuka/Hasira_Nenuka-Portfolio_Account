@@ -22,7 +22,7 @@ export function Projects() {
       }
       subtitle="A snapshot of full-stack systems, automation work and academic projects with practical workflows and user-facing screens."
     >
-      <div className="mb-8 flex flex-wrap gap-2 rounded-2xl border border-white/10 bg-background/25 p-2 backdrop-blur">
+      <div className="premium-border mb-8 flex flex-wrap gap-2 overflow-hidden rounded-2xl bg-background/25 p-2 backdrop-blur">
         {PROJECT_FILTERS.map((f) => (
           <button
             key={f}
@@ -48,7 +48,7 @@ export function Projects() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.35, delay: i * 0.04 }}
-              className="group surface flex flex-col overflow-hidden rounded-2xl card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40"
+              className="premium-border group surface flex flex-col overflow-hidden rounded-2xl card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40"
             >
               <div className={`relative h-52 overflow-hidden bg-gradient-to-br ${p.gradient}`}>
                 {p.image ? (
@@ -63,7 +63,11 @@ export function Projects() {
                     <Folder className="size-12 text-foreground/40 group-hover:scale-110 transition-transform" />
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/86 via-background/8 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+                <div
+                  aria-hidden
+                  className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/12 to-transparent opacity-0 transition group-hover:opacity-100"
+                />
                 <div className="absolute left-3 top-3 z-10 flex flex-wrap gap-1">
                   {p.category.map((c) => (
                     <span
@@ -74,7 +78,7 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-                <div className="absolute bottom-3 right-3 rounded-full border border-white/15 bg-background/65 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-[var(--brand)] backdrop-blur">
+                <div className="absolute bottom-3 right-3 rounded-full border border-white/15 bg-background/65 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-[var(--brand)] shadow-[0_0_24px_-12px_var(--brand)] backdrop-blur">
                   Case Study
                 </div>
               </div>

@@ -7,9 +7,11 @@ import {
   Linkedin,
   Mail,
   MapPin,
+  MonitorDot,
   ShieldCheck,
   Sparkles,
   TerminalSquare,
+  Workflow,
 } from "lucide-react";
 import { HIGHLIGHTS, SOCIALS, STATS } from "./data";
 
@@ -21,12 +23,33 @@ export function Hero() {
     >
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 h-px bg-[image:var(--gradient-brand)] opacity-70"
+        className="absolute inset-x-0 top-0 h-px bg-[image:var(--gradient-brand)] bg-[length:220%_220%] opacity-80 animate-gradient-pan"
       />
       <div
         aria-hidden
-        className="absolute inset-x-0 top-24 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"
+        className="absolute inset-x-0 top-24 h-px bg-gradient-to-r from-transparent via-[var(--brand-2)]/40 to-[var(--brand-3)]/20"
       />
+      <div
+        aria-hidden
+        className="absolute left-1/2 top-20 h-[78%] w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-white/10 to-transparent"
+      />
+      <div aria-hidden className="tech-3d-scene hidden lg:block">
+        <div className="tech-3d-core">
+          <div className="tech-cube">
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="tech-ring" />
+          <div className="tech-ring" />
+          <div className="tech-chip">REACT</div>
+          <div className="tech-chip">API</div>
+          <div className="tech-chip">SEC</div>
+        </div>
+      </div>
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.04fr_0.96fr]">
         <motion.div
@@ -34,7 +57,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
+          <div className="premium-border mb-6 inline-flex max-w-full items-center gap-2 overflow-hidden rounded-full bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
             <Sparkles className="size-3.5 text-[var(--brand-2)]" />
             <span className="truncate">
               Available for internships, freelance work and collaborations
@@ -43,7 +66,9 @@ export function Hero() {
 
           <h1 className="max-w-4xl text-4xl font-bold leading-[1.02] sm:text-5xl md:text-7xl">
             Hasira Nenuka
-            <span className="block gradient-text">Software Developer</span>
+            <span className="block gradient-text bg-[length:180%_180%] animate-gradient-pan">
+              Software Developer
+            </span>
             <span className="block text-foreground/92">with a security mindset.</span>
           </h1>
 
@@ -61,7 +86,7 @@ export function Hero() {
             {HIGHLIGHTS.map((highlight) => (
               <span
                 key={highlight}
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.055] px-3 py-1.5 text-xs text-foreground/85"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs text-foreground/85 shadow-[0_12px_30px_-24px_var(--brand-2)] backdrop-blur"
               >
                 <CheckCircle2 className="size-3 text-[var(--brand-2)]" />
                 {highlight}
@@ -122,17 +147,21 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="relative w-full max-w-[470px] justify-self-center lg:justify-self-end"
         >
-          <div className="surface relative overflow-hidden rounded-[1.75rem] p-4 sm:p-5">
+          <div className="premium-border surface holo-panel relative overflow-hidden rounded-[1.75rem] p-4 sm:p-5">
             <div
               aria-hidden
-              className="absolute inset-x-8 top-0 h-px bg-[image:var(--gradient-brand)]"
+              className="absolute inset-x-8 top-0 h-px bg-[image:var(--gradient-brand)] bg-[length:200%_200%] animate-gradient-pan"
             />
             <div
               aria-hidden
-              className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"
+              className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-[var(--brand-2)]/35 to-transparent"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-[linear-gradient(115deg,transparent_0_28%,oklch(1_0_0/0.05)_29%,transparent_36%)]"
             />
 
-            <div className="mb-4 flex items-center justify-between rounded-2xl border border-white/10 bg-background/35 px-4 py-3">
+            <div className="relative mb-4 flex items-center justify-between rounded-2xl border border-white/10 bg-background/35 px-4 py-3 shadow-[inset_0_1px_0_oklch(1_0_0/0.08)]">
               <div className="flex items-center gap-2">
                 <span className="grid size-9 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground">
                   <TerminalSquare className="size-4" />
@@ -144,12 +173,12 @@ export function Hero() {
                   </p>
                 </div>
               </div>
-              <span className="rounded-full border border-[var(--brand)]/30 bg-[var(--brand)]/10 px-2.5 py-1 text-[11px] font-semibold text-[var(--brand)]">
+              <span className="rounded-full border border-[var(--brand)]/30 bg-[var(--brand)]/10 px-2.5 py-1 text-[11px] font-semibold text-[var(--brand)] shadow-[0_0_24px_-10px_var(--brand)]">
                 Online
               </span>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-secondary">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-secondary shadow-[0_20px_70px_-40px_var(--brand)]">
               <img
                 src="/Profile.jpeg"
                 alt="Hasira Nenuka portrait"
@@ -157,6 +186,29 @@ export function Hero() {
                 height={760}
                 className="aspect-[4/4.25] w-full object-cover"
               />
+              <div
+                aria-hidden
+                className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[var(--brand)]/24 to-transparent"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/10 to-transparent animate-scan"
+              />
+              <div className="absolute left-3 top-3 grid gap-2">
+                {[
+                  ["React", "UI"],
+                  ["API", "JWT"],
+                  ["Secure", "Flow"],
+                ].map(([label, value]) => (
+                  <span
+                    key={label}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-background/62 px-2.5 py-1 text-[10px] font-medium backdrop-blur"
+                  >
+                    <span className="size-1.5 rounded-full bg-[var(--brand-2)]" />
+                    {label} <span className="text-muted-foreground">{value}</span>
+                  </span>
+                ))}
+              </div>
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/94 via-background/35 to-transparent p-5 pt-24">
                 <div className="flex items-center justify-between gap-3">
                   <div>
@@ -176,12 +228,31 @@ export function Hero() {
               {STATS.map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-2xl border border-white/10 bg-white/[0.045] p-4"
+                  className="rounded-2xl border border-white/10 bg-white/[0.055] p-4 shadow-[inset_0_1px_0_oklch(1_0_0/0.08)]"
                 >
                   <p className="text-2xl font-bold gradient-text md:text-3xl">{stat.value}</p>
                   <p className="mt-1 text-xs text-muted-foreground">{stat.label}</p>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <div className="rounded-2xl border border-white/10 bg-background/30 p-4">
+                <p className="flex items-center gap-2 text-xs font-semibold text-foreground/90">
+                  <MonitorDot className="size-4 text-[var(--brand)]" /> Interface
+                </p>
+                <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/10">
+                  <div className="h-full w-[86%] rounded-full bg-[image:var(--gradient-brand)]" />
+                </div>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-background/30 p-4">
+                <p className="flex items-center gap-2 text-xs font-semibold text-foreground/90">
+                  <Workflow className="size-4 text-[var(--brand-2)]" /> Delivery
+                </p>
+                <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/10">
+                  <div className="h-full w-[78%] rounded-full bg-[image:var(--gradient-brand)]" />
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>

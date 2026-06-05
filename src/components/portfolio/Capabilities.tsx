@@ -8,10 +8,14 @@ export function Capabilities() {
   return (
     <section id="capabilities" className="relative scroll-mt-24 py-12 md:py-18">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="surface relative overflow-hidden rounded-[1.5rem] p-5 sm:p-6 lg:p-8">
+        <div className="premium-border surface relative overflow-hidden rounded-[1.5rem] p-5 sm:p-6 lg:p-8">
           <div
             aria-hidden
-            className="absolute inset-x-0 top-0 h-px bg-[image:var(--gradient-brand)] opacity-80"
+            className="absolute inset-x-0 top-0 h-px bg-[image:var(--gradient-brand)] bg-[length:220%_220%] opacity-80 animate-gradient-pan"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-y-8 right-0 w-px bg-gradient-to-b from-transparent via-[var(--brand-2)]/30 to-transparent"
           />
           <div className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
             <motion.div
@@ -20,7 +24,7 @@ export function Capabilities() {
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
             >
-              <span className="mb-3 inline-flex rounded-full border border-white/10 bg-white/[0.055] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">
+              <span className="premium-border mb-3 inline-flex overflow-hidden rounded-full bg-white/[0.055] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[var(--brand)]">
                 What I Deliver
               </span>
               <h2 className="max-w-xl text-2xl font-bold leading-tight md:text-4xl">
@@ -44,8 +48,12 @@ export function Capabilities() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.07 }}
-                    className="group rounded-2xl border border-white/10 bg-background/28 p-5 card-hover hover:-translate-y-1 hover:border-[var(--brand)]/45 hover:bg-background/42"
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-background/28 p-5 card-hover hover:-translate-y-1 hover:border-[var(--brand)]/45 hover:bg-background/42"
                   >
+                    <div
+                      aria-hidden
+                      className="absolute inset-x-4 top-0 h-px bg-[image:var(--gradient-brand)] opacity-0 transition group-hover:opacity-80"
+                    />
                     <div className="mb-4 flex items-center justify-between gap-3">
                       <span className="grid size-10 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-glow)]">
                         <Icon className="size-5" />
