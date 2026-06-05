@@ -125,5 +125,5 @@ export const STATS = [
 export const SOCIALS = {
   github: "https://github.com/hasira-nenuka",
   linkedin: "https://linkedin.com/",
-  email: "https://mail.google.com/mail/?view=cm&to=hasiranenuka20896@gmail.com",
+  email: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=hasiranenuka20896@gmail.com",
 };
