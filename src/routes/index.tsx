@@ -1,17 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
-import { About } from "@/components/portfolio/About";
-import { Capabilities } from "@/components/portfolio/Capabilities";
-import { Skills } from "@/components/portfolio/Skills";
-import { Education } from "@/components/portfolio/Education";
-import { Projects } from "@/components/portfolio/Projects";
-import { GitHubShowcase } from "@/components/portfolio/GitHubShowcase";
-import { Certifications } from "@/components/portfolio/Certifications";
-import { CyberSecurity } from "@/components/portfolio/CyberSecurity";
-import { Contact } from "@/components/portfolio/Contact";
-import { Footer } from "@/components/portfolio/Footer";
-import { Loader } from "@/components/portfolio/Loader";
+import { PortfolioPage } from "@/components/portfolio/PortfolioPage";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,20 +26,8 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="page-shell relative min-h-dvh overflow-hidden">
-      <Loader />
-      <Navbar />
+    <PortfolioPage contentClassName="">
       <Hero />
-      <About />
-      <Capabilities />
-      <Skills />
-      <Education />
-      <Projects />
-      <GitHubShowcase />
-      <Certifications />
-      <CyberSecurity />
-      <Contact />
-      <Footer />
-    </main>
+    </PortfolioPage>
   );
 }

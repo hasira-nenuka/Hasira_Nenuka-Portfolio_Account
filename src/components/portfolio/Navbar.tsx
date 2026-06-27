@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Code2, Menu, Moon, Sun, X } from "lucide-react";
 import { NAV_LINKS } from "./data";
 
@@ -33,7 +34,7 @@ export function Navbar() {
           }`}
         >
           <nav className="flex h-14 items-center justify-between">
-            <a href="#home" className="flex items-center gap-2 font-display font-bold text-lg">
+            <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg">
               <span className="grid size-9 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-glow)]">
                 <Code2 className="size-5" />
               </span>
@@ -43,17 +44,21 @@ export function Navbar() {
                 aria-hidden
                 className="hidden h-2 w-2 rounded-full bg-[var(--brand-2)] shadow-[0_0_18px_var(--brand-2)] md:block"
               />
-            </a>
+            </Link>
 
             <ul className="hidden items-center gap-1 xl:flex">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
-                  <a
-                    href={l.href}
+                  <Link
+                    to={l.href}
                     className="rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.07] hover:text-foreground hover:shadow-[inset_0_0_0_1px_oklch(1_0_0/0.08)]"
+                    activeProps={{
+                      className:
+                        "rounded-lg px-3 py-2 text-sm bg-white/[0.07] text-foreground shadow-[inset_0_0_0_1px_oklch(1_0_0/0.08)]",
+                    }}
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -66,12 +71,12 @@ export function Navbar() {
               >
                 {light ? <Moon className="size-4" /> : <Sun className="size-4" />}
               </button>
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="hidden items-center rounded-xl bg-[image:var(--gradient-brand)] bg-[length:180%_180%] px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition hover:-translate-y-0.5 animate-gradient-pan sm:inline-flex"
               >
                 Hire me
-              </a>
+              </Link>
               <button
                 aria-label="Menu"
                 className="grid size-9 place-items-center rounded-xl border border-border bg-background/25 xl:hidden"
@@ -86,13 +91,17 @@ export function Navbar() {
             <ul className="grid grid-cols-2 gap-1 pb-4 pt-2 animate-fade-up sm:grid-cols-3 xl:hidden">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
-                  <a
-                    href={l.href}
+                  <Link
+                    to={l.href}
                     onClick={() => setOpen(false)}
                     className="block rounded-lg px-3 py-2 text-sm text-muted-foreground transition hover:bg-white/[0.055] hover:text-foreground"
+                    activeProps={{
+                      className:
+                        "block rounded-lg px-3 py-2 text-sm bg-white/[0.055] text-foreground",
+                    }}
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

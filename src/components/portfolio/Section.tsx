@@ -15,7 +15,7 @@ export function Section({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className="relative scroll-mt-24 py-16 md:py-24">
+    <section id={id} className="relative scroll-mt-24 py-10 md:py-12">
       <div
         aria-hidden
         className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--brand)]/20 via-50% to-transparent"

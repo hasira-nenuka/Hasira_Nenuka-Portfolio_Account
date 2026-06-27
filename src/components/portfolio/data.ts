@@ -1,13 +1,13 @@
 export const NAV_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#capabilities", label: "Services" },
-  { href: "#skills", label: "Skills" },
-  { href: "#education", label: "Education" },
-  { href: "#projects", label: "Projects" },
-  { href: "#github", label: "GitHub" },
-  { href: "#certs", label: "Achievements" },
-  { href: "#security", label: "Security" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/skills", label: "Skills" },
+  { href: "/education", label: "Education" },
+  { href: "/projects", label: "Projects" },
+  { href: "/github", label: "GitHub" },
+  { href: "/achievements", label: "Achievements" },
+  { href: "/security", label: "Security" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const SKILLS = [
@@ -40,7 +40,7 @@ export const SKILLS = [
   },
 ];
 
-export type ProjectCategory = "Frontend" | "Backend" | "Full Stack" | "Academic";
+export type ProjectCategory = "Frontend" | "Backend" | "Full Stack" | "Academic" | "Mobile";
 
 export const PROJECTS: {
   title: string;
@@ -96,7 +96,7 @@ export const PROJECTS: {
     image: "/Helpdesk%20management%20system.png",
   },
   {
-    title: "MERN Application",
+    title: "University Book Exchange System",
     description:
       "A MERN application for orders, inventory, finance, support/helpdesk workflows and navigation integrations.",
     tech: ["MongoDB", "Express", "React", "Node.js"],
@@ -105,6 +105,16 @@ export const PROJECTS: {
     demo: "#",
     gradient: "from-violet-500/22 via-orange-500/20 to-amber-300/25",
     image: "/MERN%20application.png",
+  },
+  {
+    title: "Wellness Tracker App",
+    description:
+      "A mobile wellness tracking application for recording daily health habits, monitoring progress and supporting personal wellbeing routines.",
+    tech: ["Mobile App", "Wellness Tracking", "Health"],
+    category: ["Mobile", "Academic"],
+    github: "https://github.com/hasira-nenuka/Wellness-_Tracker_App.git",
+    gradient: "from-cyan-400/25 via-emerald-300/20 to-violet-500/25",
+    image: "/1.png",
   },
   {
     title: "Test Automation Assignment",
@@ -123,6 +133,7 @@ export const PROJECT_FILTERS: (ProjectCategory | "All")[] = [
   "Frontend",
   "Backend",
   "Full Stack",
+  "Mobile",
   "Academic",
 ];
 

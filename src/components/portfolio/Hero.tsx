@@ -19,7 +19,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[94vh] overflow-hidden pt-28 pb-16 md:pt-36 md:pb-20"
+      className="relative min-h-[88vh] overflow-hidden pt-24 pb-14 md:pt-28 md:pb-16"
     >
       <div
         aria-hidden
@@ -96,7 +96,7 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#projects"
+              href="/projects"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-[image:var(--gradient-brand)] px-5 py-3 font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition hover:-translate-y-0.5"
             >
               <span
@@ -107,7 +107,7 @@ export function Hero() {
               <ArrowRight className="relative size-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-xl border border-border bg-background/30 px-5 py-3 font-medium transition hover:-translate-y-0.5 hover:border-[var(--brand)]/50 hover:bg-accent/60"
             >
               <Mail className="size-4" /> Contact Me
