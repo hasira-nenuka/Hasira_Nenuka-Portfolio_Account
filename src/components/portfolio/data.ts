@@ -245,6 +245,6 @@ export const CAPABILITIES = [
 
 export const SOCIALS = {
   github: "https://github.com/hasira-nenuka",
-  linkedin: "https://linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/hasira-nenuka",
   email: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=hasiranenuka20896@gmail.com",
 };

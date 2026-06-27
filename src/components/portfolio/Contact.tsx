@@ -195,7 +195,7 @@ export function Contact() {
           <ContactItem
             icon={Linkedin}
             title="LinkedIn"
-            value="linkedin.com/in/hasira"
+            value="linkedin.com/in/hasira-nenuka"
             href={SOCIALS.linkedin}
           />
           <ContactItem
