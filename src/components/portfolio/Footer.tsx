@@ -12,8 +12,8 @@ export function Footer() {
         aria-hidden
         className="absolute inset-x-0 top-0 h-px bg-[image:var(--gradient-brand)] opacity-55"
       />
-      <div className="mx-auto grid max-w-4xl gap-6 px-4 py-7 sm:px-6 lg:grid-cols-[0.95fr_1.1fr_1.05fr]">
-        <div>
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-8 sm:px-8 lg:grid-cols-[minmax(220px,0.9fr)_minmax(420px,1.25fr)_minmax(280px,0.95fr)] lg:gap-20 xl:gap-28">
+        <div className="lg:justify-self-start">
           <div className="flex items-center gap-2 font-display text-base font-bold">
             <span className="grid size-8 place-items-center rounded-lg bg-[image:var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-glow)]">
               <Code2 className="size-4" />
@@ -25,9 +25,9 @@ export function Footer() {
           </p>
         </div>
 
-        <div>
+        <div className="lg:justify-self-center">
           <h4 className="mb-2 text-sm font-semibold">Quick Links</h4>
-          <ul className="flex flex-wrap gap-x-3 gap-y-1.5 text-xs">
+          <ul className="grid max-w-xl grid-cols-2 gap-x-8 gap-y-2 text-xs sm:grid-cols-3">
             {NAV_LINKS.map((l) => (
               <li key={l.href}>
                 <a
@@ -41,7 +41,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="lg:justify-self-end">
           <h4 className="mb-2 text-sm font-semibold">Connect</h4>
           <div className="mb-3 flex items-center gap-2">
             <a
@@ -72,7 +72,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-2 px-4 py-3 text-xs text-muted-foreground sm:flex-row sm:px-6">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-3 text-xs text-muted-foreground sm:flex-row sm:px-8">
           <p>Copyright {new Date().getFullYear()} Hasira Nenuka. All rights reserved.</p>
           <p>
             Designed and developed by{" "}
