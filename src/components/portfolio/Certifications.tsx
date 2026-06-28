@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Section } from "./Section";
-import { CERTIFICATIONS, SOCIALS } from "./data";
-import { Award, ExternalLink, Eye, Images, Maximize2, X } from "lucide-react";
+import { CERTIFICATIONS } from "./data";
+import { Award, Eye, Images, Maximize2, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const PROGRAMMING_CERTIFICATES = [
@@ -157,23 +157,23 @@ const EXTRA_SKILLS_CERTIFICATES = [
 ];
 
 const CERTIFICATE_GALLERIES = {
-  "Programming Certifications": {
-    eyebrow: "Programming Certifications",
+  "Training Certificates": {
+    eyebrow: "Training Certificates",
     title: "Certificate Gallery",
     certificates: PROGRAMMING_CERTIFICATES,
   },
-  "Online Learning Certificates": {
-    eyebrow: "Online Learning Certificates",
+  "Online Certifications": {
+    eyebrow: "Online Certifications",
     title: "Certificate Gallery",
     certificates: ONLINE_LEARNING_CERTIFICATES,
   },
-  Workshops: {
-    eyebrow: "Workshops",
+  "Workshop Certificates": {
+    eyebrow: "Workshop Certificates",
     title: "Certificate Gallery",
     certificates: WORKSHOP_CERTIFICATES,
   },
-  "Extra Skills": {
-    eyebrow: "Extra Skills",
+  "Extra Skills Certificates": {
+    eyebrow: "Extra Skills Certificates",
     title: "Certificate Gallery",
     certificates: EXTRA_SKILLS_CERTIFICATES,
   },
@@ -182,8 +182,6 @@ const CERTIFICATE_GALLERIES = {
 type Certificate =
   (typeof CERTIFICATE_GALLERIES)[keyof typeof CERTIFICATE_GALLERIES]["certificates"][number];
 type CertificateGalleryTitle = keyof typeof CERTIFICATE_GALLERIES;
-
-const GITHUB_PROJECTS_URL = `${SOCIALS.github}?tab=repositories`;
 
 export function Certifications() {
   const [activeGallery, setActiveGallery] = useState<CertificateGalleryTitle | null>(null);
@@ -203,13 +201,12 @@ export function Certifications() {
           Credentials that show <span className="gradient-text">continued growth</span>
         </span>
       }
-      subtitle="Certificates, workshops, coursework and extra achievements that support my technical path."
+      subtitle="Certificates, workshops and extra achievements that support my technical path."
     >
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
         {CERTIFICATIONS.map((c, i) => {
           const galleryTitle =
             c.title in CERTIFICATE_GALLERIES ? (c.title as CertificateGalleryTitle) : null;
-          const isCourseworkProjects = c.title === "University Coursework Projects";
 
           return (
             <motion.div
@@ -224,30 +221,26 @@ export function Certifications() {
                 <button
                   type="button"
                   onClick={() => setActiveGallery(galleryTitle)}
-                  className="surface group h-full w-full cursor-pointer rounded-2xl p-6 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]"
+                  className="surface group h-full min-h-[21rem] w-full cursor-pointer overflow-hidden rounded-2xl text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]"
                   aria-haspopup="dialog"
                   aria-label={`Open ${c.title}`}
-                >
-                  <CertificationCardContent title={c.title} org={c.org} year={c.year} isClickable />
-                </button>
-              ) : isCourseworkProjects ? (
-                <a
-                  href={GITHUB_PROJECTS_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="surface group block h-full w-full cursor-pointer rounded-2xl p-6 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]"
-                  aria-label="Open all projects on GitHub"
                 >
                   <CertificationCardContent
                     title={c.title}
                     org={c.org}
                     year={c.year}
-                    actionIcon="external"
+                    image={c.image}
+                    isClickable
                   />
-                </a>
+                </button>
               ) : (
-                <div className="surface group h-full rounded-2xl p-6 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40">
-                  <CertificationCardContent title={c.title} org={c.org} year={c.year} />
+                <div className="surface group h-full min-h-[21rem] overflow-hidden rounded-2xl text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/40">
+                  <CertificationCardContent
+                    title={c.title}
+                    org={c.org}
+                    year={c.year}
+                    image={c.image}
+                  />
                 </div>
               )}
             </motion.div>
@@ -271,28 +264,41 @@ function CertificationCardContent({
   title,
   org,
   year,
+  image,
   isClickable = false,
-  actionIcon,
 }: {
   title: string;
   org: string;
   year: string;
+  image?: string;
   isClickable?: boolean;
-  actionIcon?: "external";
 }) {
   return (
     <>
-      <span className="mb-4 grid size-11 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-glow)] transition group-hover:scale-105">
-        <Award className="size-5" />
-      </span>
-      <h3 className="font-semibold">{title}</h3>
-      <p className="text-sm text-muted-foreground mt-1">{org}</p>
-      <div className="mt-4 flex items-center justify-between gap-3 border-t border-white/10 pt-4">
-        <p className="text-xs text-[var(--brand)] font-medium">{year}</p>
-        {actionIcon === "external" ? (
-          <ExternalLink className="size-4 text-muted-foreground" aria-hidden="true" />
-        ) : null}
-        {isClickable ? <Eye className="size-4 text-muted-foreground" aria-hidden="true" /> : null}
+      <div className="grid min-h-[10.5rem] place-items-center overflow-hidden border-b border-white/10 bg-white/95">
+        {image ? (
+          <img
+            src={image}
+            alt=""
+            className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+            aria-hidden="true"
+          />
+        ) : (
+          <span className="grid size-16 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-glow)] transition group-hover:scale-105">
+            <Award className="size-7" />
+          </span>
+        )}
+      </div>
+      <div className="flex min-h-[10.5rem] flex-col p-6">
+        <span className="mb-4 grid size-11 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-glow)] transition group-hover:scale-105">
+          <Award className="size-5" />
+        </span>
+        <h3 className="font-semibold leading-snug">{title}</h3>
+        <p className="mt-1 text-sm text-muted-foreground">{org}</p>
+        <div className="mt-auto flex items-center justify-between gap-3 border-t border-white/10 pt-4">
+          <p className="text-xs font-medium text-[var(--brand)]">{year}</p>
+          {isClickable ? <Eye className="size-4 text-muted-foreground" aria-hidden="true" /> : null}
+        </div>
       </div>
     </>
   );

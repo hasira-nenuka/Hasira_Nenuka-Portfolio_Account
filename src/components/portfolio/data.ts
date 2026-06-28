@@ -154,14 +154,29 @@ export const EDUCATION = {
 
 export const CERTIFICATIONS = [
   {
-    title: "University Coursework Projects",
-    org: "Software Engineering Department",
-    year: "2023 - Present",
+    title: "Training Certificates",
+    org: "Oracle / Microsoft Learn",
+    year: "2019 - Present",
+    image: "/Training%20Certificates.jpeg",
   },
-  { title: "Programming Certifications", org: "Oracle / Microsoft Learn", year: "2024" },
-  { title: "Online Learning Certificates", org: "Coursera / Udemy", year: "2023 - 2024" },
-  { title: "Extra Skills", org: "Sports / Additional Skill Certificates", year: "2023 - 2024" },
-  { title: "Workshops", org: "Industry Tech Talks", year: "2023 - 2024" },
+  {
+    title: "Online Certifications",
+    org: "Coursera / Udemy",
+    year: "2019 - Present",
+    image: "/Online%20Certifications.jpg",
+  },
+  {
+    title: "Extra Skills Certificates",
+    org: "Sports / Additional Skill Certificates",
+    year: "2019 - Present",
+    image: "/Extra%20Skills%20Certificates.jpg",
+  },
+  {
+    title: "Workshop Certificates",
+    org: "Industry Tech Talks",
+    year: "2019 - Present",
+    image: "/Workshop%20Certificates.jpg",
+  },
 ];
 
 export const SECURITY_INTERESTS = [
