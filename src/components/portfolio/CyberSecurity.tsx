@@ -11,9 +11,9 @@ export function CyberSecurity() {
       id="security"
       eyebrow="Exploring Cyber Security"
       title={
-        <>
+        <span className="block whitespace-nowrap text-[clamp(1.45rem,5.6vw,3rem)]">
           Building with a <span className="gradient-text">security-first mindset</span>
-        </>
+        </span>
       }
       subtitle="A growing area of interest alongside my core software engineering studies, focused on safer systems and stronger development habits."
     >

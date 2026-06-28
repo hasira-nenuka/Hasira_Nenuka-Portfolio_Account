@@ -28,9 +28,9 @@ export function About() {
       id="about"
       eyebrow="About Me"
       title={
-        <>
+        <span className="block whitespace-nowrap text-[clamp(1.45rem,5.6vw,3rem)]">
           A developer shaped by <span className="gradient-text">curiosity and craft</span>
-        </>
+        </span>
       }
       subtitle="I am an Information Technology undergraduate and aspiring full-stack developer who enjoys building efficient, user-friendly and scalable applications. My work combines academic learning, self-study and practical project building."
     >

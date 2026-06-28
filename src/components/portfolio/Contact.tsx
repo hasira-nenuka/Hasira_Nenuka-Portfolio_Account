@@ -60,9 +60,9 @@ export function Contact() {
       id="contact"
       eyebrow="AI Contact Desk"
       title={
-        <>
+        <span className="block whitespace-nowrap text-[clamp(1.45rem,5.6vw,3rem)]">
           Hire me through a <span className="gradient-text">smart contact flow</span>
-        </>
+        </span>
       }
       subtitle="Open to internships, collaborations, project work and interesting engineering problems."
     >

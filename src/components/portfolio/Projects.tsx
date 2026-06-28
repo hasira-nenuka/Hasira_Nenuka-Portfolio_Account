@@ -16,9 +16,9 @@ export function Projects() {
       id="projects"
       eyebrow="Featured Projects"
       title={
-        <>
+        <span className="block whitespace-nowrap text-[clamp(1.45rem,5.6vw,3rem)]">
           Selected work with <span className="gradient-text">real product shape</span>
-        </>
+        </span>
       }
       subtitle="A snapshot of full-stack systems, automation work and academic projects with practical workflows and user-facing screens."
     >

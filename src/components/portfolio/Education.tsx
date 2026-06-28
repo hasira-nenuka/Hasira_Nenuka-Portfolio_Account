@@ -8,9 +8,10 @@ export function Education() {
       id="education"
       eyebrow="Education"
       title={
-        <>
-          Academic foundation in <span className="gradient-text">software engineering</span>
-        </>
+        <span className="block whitespace-nowrap text-[clamp(1.3rem,4.7vw,3rem)]">
+          Building a Strong Foundation in{" "}
+          <span className="gradient-text">Information Technology</span>
+        </span>
       }
       subtitle="Formal computing studies supported by practical modules in development, databases, networks and information security."
     >

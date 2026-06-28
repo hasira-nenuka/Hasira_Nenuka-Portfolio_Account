@@ -11,9 +11,9 @@ export function Skills() {
       id="skills"
       eyebrow="Technical Skills"
       title={
-        <>
-          A practical toolkit for <span className="gradient-text"> shipping software </span>
-        </>
+        <span className="block whitespace-nowrap text-[clamp(1.45rem,5.6vw,3rem)]">
+          A practical toolkit for <span className="gradient-text">shipping software</span>
+        </span>
       }
       subtitle="A growing toolkit across the full stack, from responsive interfaces and APIs to databases, testing and developer workflows."
     >

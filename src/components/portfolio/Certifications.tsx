@@ -87,9 +87,9 @@ export function Certifications() {
       id="certs"
       eyebrow="Achievements & Certifications"
       title={
-        <>
+        <span className="block whitespace-nowrap text-[clamp(1.45rem,5.6vw,3rem)]">
           Credentials that show <span className="gradient-text">continued growth</span>
-        </>
+        </span>
       }
       subtitle="Certificates, workshops, coursework and extra achievements that support my technical path."
     >

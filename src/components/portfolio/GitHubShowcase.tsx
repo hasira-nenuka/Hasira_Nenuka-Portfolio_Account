@@ -24,9 +24,9 @@ export function GitHubShowcase() {
       id="github"
       eyebrow="GitHub Showcase"
       title={
-        <>
+        <span className="block whitespace-nowrap text-[clamp(1.45rem,5.6vw,3rem)]">
           Development activity and <span className="gradient-text">technical direction</span>
-        </>
+        </span>
       }
       subtitle="A portfolio-style view of repositories, practice areas and frequently used technologies."
     >

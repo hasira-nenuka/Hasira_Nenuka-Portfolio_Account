@@ -64,12 +64,17 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="max-w-4xl text-4xl font-bold leading-[1.02] sm:text-5xl md:text-7xl">
-            Hasira Nenuka
-            <span className="block gradient-text bg-[length:180%_180%] animate-gradient-pan">
+          <h1 className="max-w-4xl font-bold leading-[1.04]">
+            <span className="block bg-gradient-to-r from-white via-[var(--brand-2)] to-[var(--brand)] bg-clip-text font-display text-[clamp(3.6rem,14vw,7.5rem)] font-black leading-[0.88] tracking-[0.012em] text-transparent drop-shadow-[0_16px_38px_oklch(0.88_0.17_77_/_0.3)] sm:tracking-[0.018em]">
+              <span className="block">Hasira</span>
+              <span className="block">Nenuka</span>
+            </span>
+            <span className="mt-1 block bg-[image:var(--gradient-brand)] bg-[length:180%_180%] bg-clip-text text-3xl text-transparent animate-gradient-pan sm:whitespace-nowrap sm:text-4xl md:text-5xl">
               Full-Stack Developer
             </span>
-            <span className="block text-foreground/92">building modern web applications.</span>
+            <span className="mt-1 block text-2xl text-foreground/92 sm:whitespace-nowrap sm:text-3xl md:text-4xl">
+              Building Modern Web Applications
+            </span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg font-medium text-foreground/90 md:text-xl">
@@ -147,7 +152,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="relative w-full max-w-[470px] justify-self-center md:-mt-4 lg:-mt-8 lg:justify-self-end"
+          className="relative w-full max-w-[620px] justify-self-center md:-mt-4 lg:-mt-8 lg:justify-self-end"
         >
           <div className="premium-border surface holo-panel relative overflow-hidden rounded-[1.75rem] p-4 sm:p-5">
             <div
@@ -186,7 +191,7 @@ export function Hero() {
                 alt="Hasira Nenuka portrait"
                 width={680}
                 height={760}
-                className="aspect-[4/4.25] w-full object-cover"
+                className="aspect-[4/5.15] w-full object-cover object-center"
               />
               <div
                 aria-hidden
