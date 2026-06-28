@@ -147,7 +147,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="relative w-full max-w-[470px] justify-self-center lg:justify-self-end"
+          className="relative w-full max-w-[470px] justify-self-center md:-mt-4 lg:-mt-8 lg:justify-self-end"
         >
           <div className="premium-border surface holo-panel relative overflow-hidden rounded-[1.75rem] p-4 sm:p-5">
             <div
