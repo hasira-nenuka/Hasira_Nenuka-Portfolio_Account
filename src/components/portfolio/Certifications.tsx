@@ -24,6 +24,118 @@ const ONLINE_LEARNING_CERTIFICATES = [
     title: "Getting Started with MongoDB Atlas",
     src: "/Getting%20Started%20with%20MongoDB%20Atlas.png",
   },
+  {
+    title: "Business Analysis Basics",
+    src: "/2.png",
+  },
+  {
+    title: "Learn CCNA 200-301 Network Fundamentals Online",
+    src: "/3.png",
+  },
+  {
+    title: "Free Project Manager Course",
+    src: "/4.png",
+  },
+  {
+    title: "Free Time Management Course",
+    src: "/5.png",
+  },
+  {
+    title: "Introduction to Digital Transformation with Google Cloud",
+    src: "/6.png",
+  },
+  {
+    title: "Introduction to Generative AI Studio",
+    src: "/7.png",
+  },
+  {
+    title: "Introduction to Image Generation",
+    src: "/8.png",
+  },
+  {
+    title: "Introduction to DevOps Tools",
+    src: "/9.png",
+  },
+  {
+    title: "Business Intelligence using Excel Basics Tutorial",
+    src: "/10.png",
+  },
+  {
+    title: "Introduction to Power Query in Excel Basics Course",
+    src: "/11.png",
+  },
+  {
+    title: "AI for Business Professionals",
+    src: "/12.png",
+  },
+  {
+    title: "Critical Thinking in the AI Era",
+    src: "/13.png",
+  },
+  {
+    title: "Effective Leadership",
+    src: "/14.png",
+  },
+  {
+    title: "Professional Networking for Career Growth",
+    src: "/15.png",
+  },
+  {
+    title: "PRDV430: AI for Business Applications",
+    src: "/16.png",
+  },
+  {
+    title: "ESL005: Business-Proficient English as a Second Language",
+    src: "/17.png",
+  },
+  {
+    title: "ESL001: Elementary English as a Second Language",
+    src: "/18.png",
+  },
+  {
+    title: "BUS301: Human Resource Management",
+    src: "/19.png",
+  },
+  {
+    title: "BUS250: Introduction to Business Intelligence and Analytics",
+    src: "/20.png",
+  },
+  {
+    title: "PRDV226: Introduction to Human Resource Management",
+    src: "/21.png",
+  },
+  {
+    title: "BUS605: Strategic Project Management",
+    src: "/22.png",
+  },
+  {
+    title: "Front-End Web Development",
+    src: "/23.png",
+  },
+  {
+    title: "Introduction to Software Quality Assurance",
+    src: "/24.png",
+  },
+  {
+    title: "Python for Beginners",
+    src: "/25.png",
+  },
+  {
+    title: "Python Programming",
+    src: "/26.png",
+  },
+  {
+    title: "Web Design for Beginners",
+    src: "/27.png",
+  },
+  {
+    title: "Computer Hardware Basics",
+    src: "/28.png",
+  },
+  {
+    title: "AI/ML Engineer - Stage 1",
+    src: "/29.png",
+  },
 ];
 
 const WORKSHOP_CERTIFICATES = [
@@ -233,7 +345,7 @@ function CertificatesModal({
           </button>
         </div>
 
-        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5 pb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 pb-8">
           {gallery.certificates.map((certificate) => (
             <CertificateThumbnail
               key={certificate.src}
@@ -294,7 +406,7 @@ function CertificateThumbnail({
     <button
       type="button"
       onClick={onClick}
-      className="group surface rounded-2xl p-3 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/50 hover:shadow-[var(--shadow-card)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]"
+      className="group surface rounded-2xl p-2.5 text-left card-hover hover:-translate-y-1 hover:border-[var(--brand)]/50 hover:shadow-[var(--shadow-card)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)]"
       aria-label={`View ${certificate.title} larger`}
     >
       <div className="relative aspect-[4/3] rounded-xl bg-white overflow-hidden grid place-items-center shadow-lg">
@@ -309,8 +421,8 @@ function CertificateThumbnail({
         </span>
         <span className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/55 to-transparent opacity-0 transition group-hover:opacity-100" />
       </div>
-      <div className="mt-3 flex items-center justify-between gap-3 px-1">
-        <p className="text-sm font-semibold text-foreground">{certificate.title}</p>
+      <div className="mt-3 flex items-start justify-between gap-3 px-1">
+        <p className="text-sm font-semibold leading-snug text-foreground">{certificate.title}</p>
         <Eye className="size-4 shrink-0 text-[var(--brand)]" aria-hidden="true" />
       </div>
     </button>

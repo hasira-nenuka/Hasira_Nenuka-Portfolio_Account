@@ -83,16 +83,6 @@ const Award = createLucideIcon("Award", [
   ],
   ["circle", { cx: "12", cy: "8", r: "6", key: "1vp47v" }]
 ]);
-const BookMarked = createLucideIcon("BookMarked", [
-  ["path", { d: "M10 2v8l3-3 3 3V2", key: "sqw3rj" }],
-  [
-    "path",
-    {
-      d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
-      key: "k3hazp"
-    }
-  ]
-]);
 const BookOpen = createLucideIcon("BookOpen", [
   ["path", { d: "M12 7v14", key: "1akyts" }],
   [
@@ -311,6 +301,20 @@ const Radar = createLucideIcon("Radar", [
   ["circle", { cx: "12", cy: "12", r: "2", key: "1c9p78" }],
   ["path", { d: "m13.41 10.59 5.66-5.66", key: "mhq4k0" }]
 ]);
+const School = createLucideIcon("School", [
+  ["path", { d: "M14 22v-4a2 2 0 1 0-4 0v4", key: "hhkicm" }],
+  [
+    "path",
+    {
+      d: "m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10",
+      key: "1xqip1"
+    }
+  ],
+  ["path", { d: "M18 5v17", key: "1sw6gf" }],
+  ["path", { d: "m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6", key: "9d2mlk" }],
+  ["path", { d: "M6 5v17", key: "1xfsm0" }],
+  ["circle", { cx: "12", cy: "9", r: "2", key: "1092wv" }]
+]);
 const Server = createLucideIcon("Server", [
   ["rect", { width: "20", height: "8", x: "2", y: "2", rx: "2", ry: "2", key: "ngkwjq" }],
   ["rect", { width: "20", height: "8", x: "2", y: "14", rx: "2", ry: "2", key: "iecqi9" }],
@@ -425,15 +429,15 @@ export {
   Star as f,
   Activity as g,
   GraduationCap as h,
-  Award as i,
-  Calendar as j,
-  BookMarked as k,
+  School as i,
+  Sparkles as j,
+  Calendar as k,
   Bot as l,
-  Sparkles as m,
-  CircleCheck as n,
-  MessageSquare as o,
-  Linkedin as p,
-  MapPin as q,
+  CircleCheck as m,
+  MessageSquare as n,
+  Linkedin as o,
+  MapPin as p,
+  Award as q,
   Eye as r,
   Maximize2 as s,
   CodeXml as t,
