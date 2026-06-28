@@ -12,7 +12,7 @@ export function Skills() {
       eyebrow="Technical Skills"
       title={
         <>
-          A practical toolkit for <span className="gradient-text">shipping software</span>
+          A practical toolkit for <span className="gradient-text"> shipping software </span>
         </>
       }
       subtitle="A growing toolkit across the full stack, from responsive interfaces and APIs to databases, testing and developer workflows."

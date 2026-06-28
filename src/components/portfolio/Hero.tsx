@@ -67,19 +67,21 @@ export function Hero() {
           <h1 className="max-w-4xl text-4xl font-bold leading-[1.02] sm:text-5xl md:text-7xl">
             Hasira Nenuka
             <span className="block gradient-text bg-[length:180%_180%] animate-gradient-pan">
-              Software Developer
+              Full-Stack Developer
             </span>
-            <span className="block text-foreground/92">with a security mindset.</span>
+            <span className="block text-foreground/92">building modern web applications.</span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg font-medium text-foreground/90 md:text-xl">
-            Information Technology undergraduate building reliable web applications with clean
-            interfaces, practical backends and a growing security mindset.
+            Information Technology undergraduate passionate about building modern full-stack
+            applications with clean code, scalable backend systems, and user-friendly experiences.
           </p>
 
           <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">
-            I focus on useful software: campus systems, helpdesk workflows, automation projects and
-            modern full-stack applications that solve real problems with thoughtful design.
+            I develop web applications using React, Spring Boot, Node.js, and SQL databases while
+            strengthening my skills in software testing, automation, Agile development, and project
+            management. I enjoy building practical software solutions that solve real-world problems
+            through clean design and efficient implementation.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-2.5">
